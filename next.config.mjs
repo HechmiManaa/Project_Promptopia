@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
+      missingSuspenseWithCSRBailout: false,
+    },
+    experimental: {
       serverComponentsExternalPackages: ["mongoose"],
     },
     images: {
@@ -19,13 +22,6 @@ const nextConfig = {
       }
       return config
     }
-    
-  }
-
-  module.exports = {
-    experimental: {
-      missingSuspenseWithCSRBailout: false,
-    },
   }
 
 export default nextConfig;
